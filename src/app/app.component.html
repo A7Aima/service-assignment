@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="row">
+        <app-active-status></app-active-status>
+        <app-inactive-status></app-inactive-status>
+        <p>Active Users Available: {{userService.showStatusCount(1)}}</p>
+        <p>Inactive Users Available: {{userService.showStatusCount(0)}}</p>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<h3>Active Users</h3>
+<ul class="list-group">
+    <ng-container *ngFor="let user of userService.userList; let i = index">
+        <div *ngIf="user.status===1">
+            <li class="list-group-item">
+                {{ user.name }} | <a href="#" (click)="userService.toggleStatus(i)">Set to Inactive</a>
+            </li>
+        </div>
+    </ng-container>
+</ul>
