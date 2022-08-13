@@ -29,9 +29,11 @@ export class UserService {
         if (this.userList[index].status === Status.Inactive) {
             this.userList[index].status = Status.Active;
             this.countService.onChangeCount(this.userList[index].status);
+            this.countService.onLogUserStatusChange(this.userList[index].status, this.userList[index].name)
         } else {
             this.userList[index].status = Status.Inactive;
             this.countService.onChangeCount(this.userList[index].status);
+            this.countService.onLogUserStatusChange(this.userList[index].status, this.userList[index].name)
         }
     }
 

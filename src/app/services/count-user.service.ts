@@ -19,4 +19,12 @@ export class CountUserService {
             ++this.inactiveUserCountChange;
         }
     }
+
+    onLogUserStatusChange(status: Status, name: String): void {
+        if (status === Status.Active) {
+            console.log(name + " Status changed Inactive to Active")
+        } else {
+            console.log(name + " Status changed Active to Inactive")
+        }
+    }
 }
